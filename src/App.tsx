@@ -1,18 +1,18 @@
-import { rspc } from "./config/rspc";
+import { rspc } from './config/rspc'
 
 
 function App() {
-  const { data, isLoading, error } = rspc.createQuery(() => ["version"])
+  const version = rspc.createQuery(() => ['version'])
 
-  console.log(error)
+  console.log(version.error)
 
   return (
     <div>
       <h1>Welcome to Taurii!</h1>
-      <p>{data}</p>
-      <p>{isLoading}</p>
+      <p>{version.data}</p>
+      <p>{version.isLoading}</p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
