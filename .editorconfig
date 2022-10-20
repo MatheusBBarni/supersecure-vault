@@ -3,4 +3,9 @@ root = true
 [*]
 charset = utf-8
 indent_style = space
+
+[*.{js,jsx,ts,tsx,prisma}]
 indent_size = 2
+
+[*.{rs}]
+indent_size = 4
