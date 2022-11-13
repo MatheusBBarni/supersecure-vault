@@ -2,10 +2,10 @@ use std::{path::PathBuf, sync::Arc};
 
 pub use rspc::{Config, RouterBuilder};
 
-use crate::prisma;
+use crate::db;
 
 // #[derive(Clone)]
-pub type Ctx = Arc<prisma::PrismaClient>;
+pub type Ctx = Arc<db::PrismaClient>;
 
 pub type Router = rspc::Router<Ctx>;
 

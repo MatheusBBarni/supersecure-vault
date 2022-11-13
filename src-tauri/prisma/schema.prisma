@@ -7,7 +7,8 @@ generator client {
   // Corresponds to the cargo alias created earlier
   provider      = "cargo prisma"
   // The location to generate the client. Is relative to the position of the schema
-  output        = "../src/prisma/mod.rs"
+  output        = "../src/db.rs"
+  module_path = "db"
 }
 
 model User {
